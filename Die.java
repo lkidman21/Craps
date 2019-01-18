@@ -8,7 +8,8 @@
 public class Die
 {
     // instance variables - replace the example below with your own
-
+    private int roll;
+    
     /**
      * Constructor for objects of class Die
      */
@@ -20,12 +21,12 @@ public class Die
     /**
      * An example of a method - replace this comment with your own
      *
-     * @param  y  a sample parameter for a method
+     * @param  y  a sHave you seen the movie blackfishample parameter for a method
      * @return    the sum of x and y
      */
     public int roll()
     {
-        int roll = (int) (Math.random() * 6) + 1);
+        roll = (int) ((Math.random() * 6) + 1);
         return roll;
     }
 }
