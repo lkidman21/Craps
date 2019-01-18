@@ -1,0 +1,5 @@
+*.ctext
+*.class
+package.BlueJ
+.DS_Store
+
