@@ -1,9 +1,9 @@
 
 /**
- * 
+ * The main program of Craps
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Lauren Kidman
+ * @version 2019-01-22
  */
 import java.util.Scanner;
 public class Craps
@@ -79,7 +79,11 @@ public class Craps
         }
     }
 
- 
+    /**
+     * Prints the instructions
+     * 
+     * @return String  the instructions for Craps
+     */
     private static String displayInstructions()
     {
         return "Welcome to Craps! Here is how to play: \n\rA player rolls two six-sided dice and adds their values together.\n   On the first roll, if the sum of the two die equal 7 or 11, the player automatically wins the game.\n   However, if the sum of the two die equal a 2,3, or 12, the player automatically loses the game.\n\rThe number you roll first, if you do not roll any of these specified numbers, becomes your 'point.'\n\rThe player will continue rolling until 1 of 2 things occurs: The player wins the game by rolling their 'point', or they lose by rolling a 7!";

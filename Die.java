@@ -1,13 +1,13 @@
 
 /**
- * Write a description of class Die here.
+ * Creates a die that rolls a random integer when called
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Lauren Kidman
+ * @version 2019-01-22
  */
 public class Die
 {
-    // instance variables - replace the example below with your own
+    // instance variables
     private int roll;
     
     /**
@@ -19,10 +19,9 @@ public class Die
     }
 
     /**
-     * An example of a method - replace this comment with your own
+     * Sets the die with a random value between 1 and 6
      *
-     * @param  y  a sHave you seen the movie blackfishample parameter for a method
-     * @return    the sum of x and y
+     * @return roll  the random integer "rolled" and assigned to the die
      */
     public int roll()
     {

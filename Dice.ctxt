@@ -1,14 +1,16 @@
 #BlueJ class context
 comment0.target=Dice
-comment0.text=\n\ Write\ a\ description\ of\ class\ Dice\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment0.text=\n\ Combines\ two\ instances\ of\ the\ Die\ class\ into\ one\n\n\ @author\ Lauren\ Kidman\n\ @version\ 2019-01-22\n
 comment1.params=
 comment1.target=Dice()
 comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Dice\n
 comment2.params=
 comment2.target=int[]\ roll()
-comment2.text=\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\n\n\ @param\ \ y\ \ a\ sample\ parameter\ for\ a\ method\n\ @return\ \ \ \ the\ sum\ of\ x\ and\ y\n
+comment2.text=\n\ Sets\ the\ values\ of\ the\ two\ die\ being\ rolled\n\n\ @return\ \ \ \ the\ array\ of\ die\ values\n
 comment3.params=
 comment3.target=int\ getRoll1()
+comment3.text=\n\ Gets\ the\ value\ of\ the\ first\ die\n\ \n\ @return\ getRoll1\ \ first\ die\ number\n
 comment4.params=
 comment4.target=int\ getRoll2()
+comment4.text=\n\ Gets\ the\ value\ of\ the\ second\ die\n\ \n\ @return\ getRoll2\ \ second\ die\ number\n
 numComments=5

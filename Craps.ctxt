@@ -4,4 +4,5 @@ comment1.params=args
 comment1.target=void\ main(java.lang.String[])
 comment2.params=
 comment2.target=java.lang.String\ displayInstructions()
+comment2.text=\n\ Prints\ the\ instructions\n\ \n\ @return\ String\ \ the\ instructions\ for\ Craps\n
 numComments=3

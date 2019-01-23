@@ -1,13 +1,13 @@
 
 /**
- * Write a description of class Dice here.
+ * Combines two instances of the Die class into one
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Lauren Kidman
+ * @version 2019-01-22
  */
 public class Dice
 {
-    // instance variables - replace the example below with your own
+    // instance variables
     private Die die1;
     private Die die2;
     private int[] rolls;;
@@ -23,10 +23,9 @@ public class Dice
     }
 
     /**
-     * An example of a method - replace this comment with your own
+     * Sets the values of the two die being rolled
      *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * @return    the array of die values
      */
     public int[] roll()
     {
@@ -35,10 +34,21 @@ public class Dice
         
         return rolls;
     }
+    
+    /**
+     * Gets the value of the first die
+     * 
+     * @return getRoll1  first die number
+     */
     public int getRoll1()
     {
         return rolls[0];
     }
+    /**
+     * Gets the value of the second die
+     * 
+     * @return getRoll2  second die number
+     */
     public int getRoll2()
     {
         return rolls[1];
