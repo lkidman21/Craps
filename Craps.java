@@ -14,68 +14,93 @@ public class Craps
         Dice dice = new Dice();
         System.out.println("Would you like to play craps? (Y/N)");
         String answer = keyboard.nextLine();
-        if(answer.substring(0,1).equalsIgnoreCase("Y"))
+        boolean running = true;
+        while(running)
         {
-            System.out.println("Do you need instructions? (Y/N)");
-            String help = keyboard.nextLine();
-            if(help.substring(0,1).equalsIgnoreCase("Y"))
+            if(answer.substring(0,1).equalsIgnoreCase("Y"))
             {
-                System.out.println(displayInstructions());
-            }
-            
-            System.out.println("Lets begin!");
-            int point = 0;
-            
-            System.out.println("Press <enter> to roll:");
-            String roll = keyboard.nextLine();
-            System.out.println("rolling...rolling...rolling");
-            dice.roll();
-            int result  = dice.getRoll1() + dice.getRoll2();
-            System.out.println("You rolled: " + result);
-            boolean isGameRunning = true;
-            if(result == 7 || result == 11)
-            {
-                System.out.println("Congratulations! You've won the game.");
-                isGameRunning = false;
-            }
-            else if(result == 2 || result == 3 || result == 12)
-            {
-                System.out.println("Uh oh! You lost. :(");
-                isGameRunning = false;
-            }
-            else
-            {
-                point = result;
-                System.out.println(point + " is now your point! Try to roll it again to win!");
-            }
-            
-            while(isGameRunning)
-            {
+                System.out.println("Do you need instructions? (Y/N)");
+                String help = keyboard.nextLine();
+                if(help.substring(0,1).equalsIgnoreCase("Y"))
+                {
+                    System.out.println(displayInstructions());
+                }
+                
+                System.out.println("Lets begin!");
+                int point = 0;
+                
                 System.out.println("Press <enter> to roll:");
-                roll = keyboard.nextLine();
+                String roll = keyboard.nextLine();
                 System.out.println("rolling...rolling...rolling");
                 dice.roll();
-                result  = dice.getRoll1() + dice.getRoll2();
+                int result  = dice.getRoll1() + dice.getRoll2();
                 System.out.println("You rolled: " + result);
-                if(result == point)
+                boolean isGameRunning = true;
+                boolean done = false;
+                if(result == 7 || result == 11)
                 {
-                    System.out.println("Congratulations! You've rolled your point and won the game!");
+                    System.out.println("Congratulations! You've won the game.");
                     isGameRunning = false;
+                    done = true;
                 }
-                else if(result == 7)
+                else if(result == 2 || result == 3 || result == 12)
                 {
-                    System.out.println("Oh man, you rolled a 7...you lost!");
+                    System.out.println("Uh oh! You lost. :(");
                     isGameRunning = false;
+                    done = true;
                 }
                 else
                 {
-                    System.out.println("Roll again!");
+                    point = result;
+                    System.out.println(point + " is now your point! Try to roll it again to win!");
+                }
+                
+                while(isGameRunning)
+                {
+                    System.out.println("Press <enter> to roll:");
+                    roll = keyboard.nextLine();
+                    System.out.println("rolling...rolling...rolling");
+                    dice.roll();
+                    result  = dice.getRoll1() + dice.getRoll2();
+                    System.out.println("You rolled: " + result);
+                    if(result == point)
+                    {
+                        System.out.println("Congratulations! You've rolled your point and won the game!");
+                        isGameRunning = false;
+                        done = true;
+                    }
+                    else if(result == 7)
+                    {
+                        System.out.println("Oh man, you rolled a 7...you lost!");
+                        isGameRunning = false;
+                        done = true;
+                    }
+                    else
+                    {
+                        System.out.println("Roll again!");
+                    }
+                }
+                if(done == true)
+                {
+                   running = false;
+                   System.out.println("Would you like to play again?");
+                   String response = keyboard.nextLine();
+                   if(response.substring(0,1).equalsIgnoreCase("Y"))
+                   {
+                       System.out.println("Playing again!");
+                       running = true;
+                   }
+                   else
+                   {
+                      System.out.println("Hope you had fun!");
+                      running = false; 
+                   }
                 }
             }
-        }
-        else
-        {
-            System.out.println("Ok. Bye :(");
+            else
+            {
+                System.out.println("Ok. Bye :(");
+            }
         }
     }
 
