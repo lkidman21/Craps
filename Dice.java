@@ -32,6 +32,7 @@ public class Dice
     {
         rolls[0] = die1.roll();
         rolls[1] = die2.roll();
+        
         return rolls;
     }
     public int getRoll1()
