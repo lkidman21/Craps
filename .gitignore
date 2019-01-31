@@ -1,4 +1,4 @@
-*.ctext
+*.ctxt
 *.class
 package.BlueJ
 .DS_Store
