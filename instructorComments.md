@@ -31,4 +31,11 @@ more efficient in some way, but when it comes to writing code
 that is being read by people, I far prefer your design choice.
 Well done!
 
+Oh, and one more thing. You should include all those .class and
+.ctxt files in your `.gitignore` file. It looks like you mistakenly
+created an `ignore` file with the wrong name. That's pretty easy
+to fix at some point. Not critical now, just thought I'd mention
+it. Come to think of it, maybe I'll just fix it for you and 
+include it in my pull request! ;)
+
 SCORE: 48/50
